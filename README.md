@@ -1,4 +1,11 @@
 # Car Price Prediction Project
+## 0. How to deploy locally
+1. Fork the repository
+2. Run this command
+```bash
+pip install -e .
+python -m uvicorn api.app:app
+```
 
 This repository contains a car price prediction pipeline and a FastAPI service for serving model predictions. The workflow includes:
 
