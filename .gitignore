@@ -171,5 +171,3 @@ cython_debug/
 .pypirc
 
 data/
-models/preproc_pipeline.joblib
-models/rf_model.joblib
