@@ -1,0 +1,7 @@
+CAT_COLS = ['Manufacturer','Model','Category','Leather interior','Fuel type','Gear box type','Drive wheels','Doors','Wheel','Color','turbo']
+NUM_COLS = ['Levy', 'Prod. year', 'Engine volume', 'Mileage', 'Cylinders','Airbags']
+ORDINAL_FEATURES = ["Manufacturer", "Model", "Category", "Color", "Fuel type", "Doors", "Drive wheels"]
+ONE_HOT_FEATURES = [col for col in CAT_COLS if col not in ORDINAL_FEATURES]
+SCALED_FEATURES = ["Mileage", "Levy"]
+ALL_NUMERIC = ['Levy','Prod. year','Engine volume','Mileage','Cylinders','Airbags','turbo']
+OTHER_NUM_FEATURES = [col for col in ALL_NUMERIC if col not in SCALED_FEATURES]
