@@ -42,7 +42,13 @@ if __name__ == "__main__":
     print("Model trained.")
 
     # Save the model
-    joblib.dump(rf_model, os.path.join(root, "models", "rf_model.joblib"))
+    joblib.dump(rf_model, os.path.join(root, "models", "rf_model.joblib"), compress=3)
     print("Model saved.")
+    
+    # Print training RMSE
+    from sklearn.metrics import mean_squared_error
+    y_train_pred = rf_model.predict(X_train)
+    train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
+    print("Training RMSE:", train_rmse)
 
 

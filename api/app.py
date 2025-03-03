@@ -7,11 +7,16 @@ import pandas as pd
 import numpy as np
 import os
 
+# PATH
+# Define local paths where the files will be downloaded
 root = os.path.dirname(os.path.dirname(__file__))
-
-# Load the saved preprocessing pipeline and model
-preproc_pipeline = joblib.load(f"{root}/models/preproc_pipeline.joblib")
-model = joblib.load(f"{root}/models/rf_model.joblib")
+MODEL_PATH = os.path.join(root, "models", "rf_model.joblib")
+PREPROC_PATH = os.path.join(root, "models", "preproc_pipeline.joblib")
+    
+# Load the model and preprocessing pipeline
+preproc_pipeline = joblib.load(PREPROC_PATH)
+model = joblib.load(MODEL_PATH)
+    
 
 app = FastAPI(
     title="Car Price Prediction API",
