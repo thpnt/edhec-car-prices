@@ -1,0 +1,17 @@
+scikit-learn
+pandas
+scipy
+numpy
+matplotlib
+seaborn
+jupyter
+xgboost
+statsmodels
+fastapi
+setuptools
+pytest
+pydantic
+uvicorn
+requests
+joblib
+swagger-ui-py
